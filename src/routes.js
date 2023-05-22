@@ -33,7 +33,7 @@ var dashRoutes = [
     layout: "/admin",
     protected: true,
   },
-  {
+  /* {
     name: "ACCOUNT PAGES",
     category: "account",
     rtlName: "صفحات",
@@ -57,6 +57,6 @@ var dashRoutes = [
         layout: "/auth",
       },
     ],
-  },
+  }, */
 ];
 export default dashRoutes;
