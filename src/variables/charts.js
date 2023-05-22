@@ -86,11 +86,11 @@ export const barChartOptions = {
 export const lineChartData = [
   {
     name: "Mobile apps",
-    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+    data: [50,100,70],
   },
   {
     name: "Websites",
-    data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
+    data: [60,80,90],
   },
 ];
 
@@ -111,20 +111,7 @@ export const lineChartOptions = {
   },
   xaxis: {
     type: "datetime",
-    categories: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ],
+    categories: ["Disability","Dental","Life"],
     labels: {
       style: {
         colors: "#c8cfca",

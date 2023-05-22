@@ -1,4 +1,13 @@
-import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Avatar,
+  Box,
+  Flex,
+  Icon,
+  Tag,
+  TagLabel,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 function TimelineRow(props) {
@@ -34,6 +43,18 @@ function TimelineRow(props) {
         <Text fontSize="sm" color="gray.400" fontWeight="normal">
           {date}
         </Text>
+      </Flex>
+      <Flex direction="column" justifyContent="flex-start" h="100%" ms=".5rem">
+        <Tag size="md" colorScheme="red" borderRadius="full">
+          <Avatar
+            src="https://bit.ly/sage-adebayo"
+            size="xs"
+            name="Segun Adebayo"
+            ml={-1}
+            mr={2}
+          />
+          <TagLabel>Segun</TagLabel>
+        </Tag>
       </Flex>
     </Flex>
   );

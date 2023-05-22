@@ -6,6 +6,7 @@ import {
   BreadcrumbLink,
   Flex,
   Link,
+  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
@@ -146,6 +147,8 @@ export default function AdminNavbar(props) {
             {brandText}
           </Link>
         </Box>
+      <Text ml="auto">Kalaiarasan | Call for STD | Possible Inquiry Details</Text>
+
         <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
             onOpen={props.onOpen}
