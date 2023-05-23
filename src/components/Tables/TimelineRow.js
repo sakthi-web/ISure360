@@ -1,6 +1,8 @@
+import { EditIcon } from "@chakra-ui/icons";
 import {
   Avatar,
   Box,
+  Button,
   Flex,
   Icon,
   Tag,
@@ -36,7 +38,7 @@ function TimelineRow(props) {
           h={index === arrLength - 1 ? "15px" : "100%"}
         ></Box>
       </Flex>
-      <Flex direction="column" justifyContent="flex-start" h="100%">
+      <Flex direction="column" justifyContent="start" h="100%">
         <Text fontSize="sm" color={textColor} fontWeight="bold">
           {title}
         </Text>
@@ -44,7 +46,7 @@ function TimelineRow(props) {
           {date}
         </Text>
       </Flex>
-      <Flex direction="column" justifyContent="flex-start" h="100%" ms=".5rem">
+      <Flex alignItems="start" ms=".5rem" h="100%">
         <Tag size="md" colorScheme="red" borderRadius="full">
           <Avatar
             src="https://bit.ly/sage-adebayo"
@@ -55,6 +57,15 @@ function TimelineRow(props) {
           />
           <TagLabel>Segun</TagLabel>
         </Tag>
+        <Button
+          p="0"
+          h="5"
+          minW="26px"
+          borderRadius="full"
+          marginInline=".5rem"
+        >
+          <EditIcon />
+        </Button>
       </Flex>
     </Flex>
   );

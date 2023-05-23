@@ -2,25 +2,14 @@
 import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 // Chakra Imports
 import {
-  Button,
+  Tag,
+  TagLabel,
+  Avatar,
   Flex,
-  IconButton,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Text,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
-// Assets
-import avatar1 from "assets/img/avatars/avatar1.png";
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar3 from "assets/img/avatars/avatar3.png";
-// Custom Icons
-import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
 import { ItemContent } from "components/Menu/ItemContent";
 import SidebarResponsive from "components/Sidebar/SidebarResponsive";
@@ -65,8 +54,10 @@ export default function HeaderLinks(props) {
       alignItems="center"
       flexDirection="row"
     >
-      <Flex>
-        <Text>Last Supported Agent</Text>
+      <Flex justifyContent="flex-start" h="100%" ms=".5rem">
+        <Tag size="lg" colorScheme="red" borderRadius="full" cursor="pointer">
+          <TagLabel>Last Supported Agent</TagLabel>
+        </Tag>
       </Flex>
       <SidebarResponsive
         logoText={props.logoText}

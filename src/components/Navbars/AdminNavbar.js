@@ -6,8 +6,9 @@ import {
   BreadcrumbLink,
   Flex,
   Link,
-  Text,
   useColorModeValue,
+  Tag,
+  TagLabel,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
@@ -32,7 +33,7 @@ export default function AdminNavbar(props) {
   let navbarFilter = "none";
   let navbarBackdrop = "blur(21px)";
   let navbarShadow = "none";
-  let navbarBg = "none";
+  let navbarBg = "#fff";
   let navbarBorder = "transparent";
   let secondaryMargin = "0px";
   let paddingX = "15px";
@@ -147,8 +148,13 @@ export default function AdminNavbar(props) {
             {brandText}
           </Link>
         </Box>
-      <Text ml="auto">Kalaiarasan | Call for STD | Possible Inquiry Details</Text>
-
+        <Flex ms="auto">
+          <Tag size="lg" colorScheme="blue" borderRadius="full">
+            <TagLabel>Kalaiarasan</TagLabel>
+          </Tag>
+        </Flex>
+        <span style={{ marginInline: "5px" }}>&#128516;</span>| Call for STD |
+        Possible Inquiry Details
         <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
             onOpen={props.onOpen}
