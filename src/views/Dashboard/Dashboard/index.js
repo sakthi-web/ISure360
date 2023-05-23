@@ -24,6 +24,8 @@ export default function Dashboard() {
     {
       title: "Disability",
       amount: "$53,000",
+      img:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUD0ryBl2Y19QYBNOBhjYEsqzjNe-bIdKiF3r91dMvmA&usqp=CAU&ec=48665698",
       label: [
         {
           text: "Policy ID",
@@ -36,6 +38,8 @@ export default function Dashboard() {
     {
       title: "Dental",
       amount: "$2,300",
+      img:
+        "https://www.metlife.com/content/dam/metlifecom/us/homepage/insurance/prod_big_dental-compressor.jpg",
       label: [
         {
           text: "Policy ID",
@@ -52,6 +56,8 @@ export default function Dashboard() {
     {
       title: "Life",
       amount: "$3,020",
+      img:
+        "https://www.metlife.com/content/dam/metlifecom/us/homepage/insurance/prod_big_home.jpg",
       label: [
         {
           text: "Policy ID",
@@ -71,8 +77,8 @@ export default function Dashboard() {
             <MiniStatistics
               title={item?.title}
               amount={item?.amount}
+              img={item?.img}
               desc={item?.label}
-              percentage={55}
               icon={<SupportIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
             />
           );
@@ -85,7 +91,7 @@ export default function Dashboard() {
         gap="24px"
       ></Grid>
       <Grid
-        templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr", lg: "1fr 1fr" }}
+        templateColumns={{ sm: "1fr", md: "1fr 1fr", lg: "1fr 1fr" }}
         templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
         gap="24px"
       >
@@ -94,10 +100,7 @@ export default function Dashboard() {
           percentage={23}
           chart={<BarChart />}
         />
-        <OrdersOverview
-          title={"Client Review"}
-          data={timelineData}
-        />
+        <OrdersOverview title={"Client Review"} data={timelineData} />
       </Grid>
       <Grid
         templateColumns={{ md: "1fr", lg: "1fr" }}
@@ -106,7 +109,7 @@ export default function Dashboard() {
         gap="24px"
       ></Grid>
       <Grid
-        templateColumns={{ sm: "1fr", lg: "1.3fr 1.7fr" }}
+        templateColumns={{ sm: "1fr", lg: "1fr 1fr" }}
         templateRows={{ sm: "repeat(2, 1fr)", lg: "1fr" }}
         gap="24px"
         mb={{ lg: "26px" }}
